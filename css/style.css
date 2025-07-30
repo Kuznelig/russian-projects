@@ -52,7 +52,7 @@ body {
 
 .text-h3 {
     font-size: 24px;
-    
+
 }
 
 .text-h4 {
@@ -136,22 +136,21 @@ body {
     max-width: 734px;
     letter-spacing: -0.5px;
 }
+
 @media screen and (max-width: 1280px) {
     .header {
         padding-right: 15px;
         padding-left: 15px;
     }
+
     .h1 {
         font-size: 55px;
         line-height: 75px;
     }
 }
 
-@media screen and (max-width: 768px) {
-    
+@media screen and (max-width: 768px) {}
 
-    
-}
 .about {
     min-height: 1080px;
     position: relative;
@@ -278,7 +277,7 @@ body {
     min-height: 181px;
     background-color: var(--accent-color);
     padding-bottom: 39px;
-    
+
 }
 
 .request h2 {
@@ -292,7 +291,7 @@ body {
 }
 
 .request-content p {
-    
+
     color: var(--white-color);
     font-size: 24px;
     font-weight: 700;
@@ -348,7 +347,7 @@ body {
         padding-left: 15px;
         padding-right: 15px;
     }
-    
+
 }
 
 @media screen and (max-width: 768px) {
@@ -439,8 +438,8 @@ body {
 
     .services-item {
         /* width: 100%; */
-    padding-left: 0;
-    padding-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -544,8 +543,8 @@ ul.question-list {
     background-image: url(../img/arrow-icon.svg);
     background-repeat: no-repeat;
     margin-right: 15px;
-    
-    
+
+
 }
 
 .question-list-item .open::before {
@@ -554,38 +553,42 @@ ul.question-list {
     left: 3px;
     top: 5px;
 }
+
 .question-list-item .close::before {
     position: absolute;
     left: 3px;
     top: 12px;
 }
+
 h3.close+p.text-p {
     display: none;
 }
+
 @media screen and (max-width: 1280px) {
     .question {
-        
+
         padding-right: 15px;
         padding-left: 15px;
     }
 }
 
-@media screen and (max-width: 768px) {
-    
-}
+@media screen and (max-width: 768px) {}
+
 /* Наши партнеры */
 .partners {
-    
+
     background-color: var(--dark-color);
     margin-bottom: 150px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .partners h2 {
     color: var(--white-color);
     letter-spacing: -1px;
     margin-bottom: 50px;
 }
+
 .partner-list {
     padding: 0;
     margin: 0;
@@ -593,28 +596,33 @@ h3.close+p.text-p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
-    
-    
+
+
+
 }
+
 @media screen and (max-width: 1280px) {
     .partners {
         padding-right: 15px;
         padding-left: 15px;
     }
+
     .partner-list {
         justify-content: space-around;
         row-gap: 30px;
     }
+
     .partner-list-item {
         max-width: 140px;
         padding-right: 10px;
         padding-left: 10px;
 
     }
+
     .partner-list-item:last-child {
         margin-right: 0;
     }
+
     .partner-list-item img {
         display: block;
         width: 100%;
@@ -622,18 +630,18 @@ h3.close+p.text-p {
     }
 }
 
-@media screen and (max-width: 768px) {
-    
-}
+@media screen and (max-width: 768px) {}
 
 /* Отзывы */
 .reviews {
     margin-bottom: 142px;
 }
+
 .reviews h2 {
     letter-spacing: -1px;
     margin-bottom: 64px;
 }
+
 .review-list {
     margin: 0;
     padding: 0;
@@ -642,9 +650,10 @@ h3.close+p.text-p {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-    .review-list-item {
+
+.review-list-item {
     width: 350px;
-} 
+}
 
 .review-list-item p {
     color: var(--gray-color);
@@ -657,6 +666,7 @@ h3.close+p.text-p {
     margin-bottom: 30px;
     position: relative;
 }
+
 .review-list-item p::before {
     position: absolute;
     top: 30px;
@@ -668,9 +678,11 @@ h3.close+p.text-p {
     width: 42px;
     height: 42px;
 }
+
 .quote {
     margin: 0;
 }
+
 .review-list-item cite {
     font-family: Oswald;
     font-size: 21px;
@@ -679,21 +691,25 @@ h3.close+p.text-p {
     font-style: normal;
     letter-spacing: 0.5px;
 }
+
 .quote span {
     color: var(--accent-color);
 }
+
 @media screen and (max-width: 1280px) {
     .reviews {
         padding-right: 15px;
         padding-left: 15px;
     }
+
     .review-list {
         grid-template-columns: repeat(2, 1fr);
-        
+
     }
+
     .review-list-item {
         width: 100%;
-} 
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -701,14 +717,17 @@ h3.close+p.text-p {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
 /* Контакты */
 .contacts {
     padding-top: 100px;
     padding-bottom: 150px;
 }
+
 .contacts h2 {
     margin-bottom: 62px;
 }
+
 .contact-list {
     margin: 0;
     padding: 0;
@@ -717,11 +736,13 @@ h3.close+p.text-p {
     gap: 30px;
     grid-template-columns: repeat(4, 1fr);
 }
+
 .contact-list-item {
     display: flex;
     flex-direction: column;
-align-items: center
+    align-items: center
 }
+
 .contact-list-item h3 {
     font-family: Oswald;
     font-size: 24px;
@@ -732,12 +753,15 @@ align-items: center
     text-transform: uppercase;
     margin-bottom: 17px;
 }
+
 .contact-list-item svg {
     margin-bottom: 15px;
 }
+
 svg.email-svg {
     margin-bottom: 25px;
 }
+
 .contact-list-item address {
     font-style: normal;
     color: #000000;
@@ -746,8 +770,9 @@ svg.email-svg {
     line-height: 36px;
     text-align: center;
     text-transform: uppercase;
-    
+
 }
+
 .contact-list-item .phone {
     display: block;
     text-decoration: none;
@@ -758,6 +783,7 @@ svg.email-svg {
     text-align: center;
     text-transform: uppercase;
 }
+
 .contact-list-item .work-time {
     color: #000000;
     font-size: 24px;
@@ -766,6 +792,7 @@ svg.email-svg {
     text-align: center;
     text-transform: uppercase;
 }
+
 a.email {
     display: block;
     text-decoration: none;
@@ -775,4 +802,23 @@ a.email {
     line-height: 36px;
     text-align: center;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 1280px) {
+    .contacts {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .contact-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 80px;
+    }
 }
