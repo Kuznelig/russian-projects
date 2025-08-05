@@ -18,19 +18,51 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.css"
+      media="screen,projection"
+    /> -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <a href="#!"><i class="material-icons">home</i>Главная</a>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">people</i>О нас</a>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">grade</i>Услуги</a>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">phone</i>Контакты</a>
+      </li>
+
+      <li><div class="divider"></div></li>
+      <li>
+        <a href="#!" class="sidenav-close"
+          ><i class="material-icons">close</i>Закрыть</a
+        >
+      </li>
+    </ul>
     <header class="header">
       <div class="container">
         <div class="header__title">
           <img src="img/logo.svg" class="logo" alt="Логотип" />
-          <button class="burger">
+          <a href="#" data-target="slide-out" class="burger sidenav-trigger">
             <span class="burger__line"></span>
             <span class="burger__line"></span>
             <span class="burger__line"></span>
-          </button>
+          </a>
         </div>
         <h1 class="h1">Реализуем крупнейшие проекты в России</h1>
         <h4 class="h4">Стадионы, газопроводы, мосты, дамбы</h4>
@@ -100,6 +132,23 @@
         </div>
       </div>
     </section>
+    <!-- Modal Trigger
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
+      >Modal</a
+    > -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, explicabo modi, blanditiis ipsa, soluta vel eos quis animi magni recusandae reiciendis sint fugit. Nulla eum itaque obcaecati ad sunt, at aut odit illum debitis culpa pariatur atque quae quia voluptatum maxime optio. Mollitia ex, rem tenetur sapiente voluptatem molestiae nam assumenda corrupti culpa obcaecati voluptatibus nostrum, quo repudiandae reprehenderit asperiores nemo neque sit soluta amet deleniti non illo iure dolorem quia. Tenetur reiciendis architecto aperiam! Beatae voluptates ipsam, fugit, reiciendis est quos inventore sit vitae voluptatem dolore asperiores quibusdam quis. Fugit perferendis consequatur odio? Ipsam voluptas quaerat distinctio asperiores saepe!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+          >Agree</a
+        >
+      </div>
+    </div>
     <section class="request">
       <div class="container">
         <div class="request-flex">
@@ -107,10 +156,10 @@
             <h2>Самые умные проекты</h2>
             <p>реализуем самые смелые решения в россии!</p>
           </div>
-          <button class="request-button">
+          <a href="#modal1" class="request-button modal-trigger">
             <img class="request-button-img" src="img/mail-request.svg" alt="" />
             <p class="text-request">ваш запрос</p>
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -155,28 +204,28 @@
     <section class="portfolio">
       <ul class="portfolio-list">
         <li class="portfolio-item">
-          <img width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
+          <img class="materialboxed" width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
         </li>
         <li class="portfolio-item">
-          <img width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
+          <img class="materialboxed" width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
         </li>
         <li class="portfolio-item">
-          <img width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
+          <img class="materialboxed" width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
         </li>
         <li class="portfolio-item">
-          <img width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
+          <img class="materialboxed" width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
         </li>
         <li class="portfolio-item">
-          <img width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
+          <img class="materialboxed" width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
         </li>
         <li class="portfolio-item">
-          <img width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
+          <img class="materialboxed" width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
         </li>
         <li class="portfolio-item">
-          <img width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
+          <img class="materialboxed" width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
         </li>
         <li class="portfolio-item">
-          <img width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
+          <img class="materialboxed" width="480" height="407" src="img/portfolio-img.jpeg" alt="" />
         </li>
       </ul>
     </section>
@@ -185,8 +234,9 @@
       <div class="container">
         <h2>Ответы на вопросы</h2>
         <ul class="question-list">
-          <li class="question-list-item">
-            <h3 class="close">Работаете ли вы по 249 фз?</h3>
+          <details class="question-list-item">
+            <!--тег details семантически не может быть дочерним элементом тега li, поэтому нужно вместо ul использоват div с размещенными в нем другими тегами div -->
+            <summary class="close">Работаете ли вы по 249 фз?</summary>
             <p class="text-p">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
@@ -194,9 +244,9 @@
               печатник создал большую коллекцию размеров и форм шрифтов,
               используя Lorem Ipsum для распечатки образцов.
             </p>
-          </li>
-          <li class="question-list-item">
-            <h3 class="open">Работаете ли вы по 249 фз?</h3>
+          </details>
+          <details class="question-list-item">
+            <summary class="open">Работаете ли вы по 249 фз?</summary>
             <p class="text-p">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
@@ -204,9 +254,9 @@
               печатник создал большую коллекцию размеров и форм шрифтов,
               используя Lorem Ipsum для распечатки образцов.
             </p>
-          </li>
-          <li class="question-list-item">
-            <h3 class="close">Работаете ли вы по 249 фз?</h3>
+          </details>
+          <details class="question-list-item">
+            <summary class="close">Работаете ли вы по 249 фз?</summary>
             <p class="text-p">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
@@ -214,9 +264,9 @@
               печатник создал большую коллекцию размеров и форм шрифтов,
               используя Lorem Ipsum для распечатки образцов.
             </p>
-          </li>
-          <li class="question-list-item">
-            <h3 class="close">Работаете ли вы по 249 фз?</h3>
+          </details>
+          <details class="question-list-item">
+            <summary class="close">Работаете ли вы по 249 фз?</summary>
             <p class="text-p">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
@@ -224,7 +274,7 @@
               печатник создал большую коллекцию размеров и форм шрифтов,
               используя Lorem Ipsum для распечатки образцов.
             </p>
-          </li>
+          </details>
         </ul>
       </div>
     </section>
@@ -352,7 +402,10 @@
               />
             </svg>
             <h3>Адрес</h3>
-            <address>Невский проспект 140,<br> офис 140-142</address>
+            <address>
+              Невский проспект 140,<br />
+              офис 140-142
+            </address>
           </li>
           <li class="contact-list-item">
             <svg
@@ -383,12 +436,16 @@
                 fill-rule="evenodd"
                 d="M0 23.25C0 10.4 10.4 0 23.25 0 36.09 0 46.5 10.4 46.5 23.25c0 12.84-10.41 23.25-23.25 23.25C10.4 46.5 0 36.09 0 23.25Zm4.5 0C4.5 33.65 12.84 42 23.25 42 33.56 42 42 33.65 42 23.25 42 12.93 33.56 4.5 23.25 4.5 12.84 4.5 4.5 12.93 4.5 23.25Zm26.06 8.71c-.38.57-1.03.66-1.6.29L21 26.43c-.29-.18-.38-.56-.38-.84V10.12c0-.56.47-1.12 1.13-1.12h3c.56 0 1.12.56 1.12 1.12v13.31l6.19 4.6c.56.37.65 1.03.28 1.59l-1.78 2.34Z"
               />
-            </svg> 
+            </svg>
             <h3>Время работы:</h3>
-            <p class="work-time">ПН-СБ<br> 10:00 - 20:00</p>
+            <p class="work-time">
+              ПН-СБ<br />
+              10:00 - 20:00
+            </p>
           </li>
           <li class="contact-list-item">
-            <svg class="email-svg"
+            <svg
+              class="email-svg"
               xmlns="http://www.w3.org/2000/svg"
               width="48"
               height="36"
@@ -412,5 +469,7 @@
         <p>Разработано лучшей студей</p>
       </div>
     </footer>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
